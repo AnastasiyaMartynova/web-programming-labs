@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Анкета</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+        
+        h1 {
+            text-align: center;
+        }
+        
+        .container {
+            border: 5px solid;
+            margin: 10px 0;
+            padding: 10px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"],
+        input[type="password"],
+        input[type="date"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+
+        textarea {
+            resize: vertical;
+        }
+
+        .button-container {
+            text-align: center;
+        }
+
+        button,
+        input[type="submit"] {
+            padding: 10px 20px;
+            margin: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Анкета</h1>
+    <div class="container">
+        <form>
+            <label for="surname"><b>Фамилия:</b></label>
+            <input type="text" id="surname" placeholder="Иванов">
+            
+            <label for="name"><b>Имя:</b></label>
+            <input type="text" id="name" placeholder="Иван">
+            
+            <label for="patronymic"><b>Отчество:</b></label>
+            <input type="text" id="patronymic" placeholder="Иванович">
+            
+            <label for="password"><b>Пароль:</b></label>
+            <input type="password" id="password" placeholder="Введите пароль">
+            
+            <label for="birthdate"><b>Дата рождения:</b></label>
+            <input type="date" id="birthdate">
+            
+            <h5>Укажите самый удобный способ связаться с вами:</h5>
+            <input type="radio" id="work" name="contact_method">
+            <label for="work">Рабочий телефон</label>
+            <input type="radio" id="home" name="contact_method">
+            <label for="home">Домашний телефон</label>
+            <input type="radio" id="email" name="contact_method">
+            <label for="email">Электронная почта</label>
+
+            <label for="education"><b>Укажите ваше образование:</b></label>
+            <select name="education" id="education">
+                <option value="" disabled selected hidden>Выберите образование</option>
+                <option value="bachelor">Высшее(Бакалавриат)</option>
+                <option value="master">Высшее(Магистратура)</option>
+                <option value="secondary_professional">Среднее профессиональное</option>
+                <option value="secondary_general">Среднее общее</option>
+            </select>
+
+            <label for="about"><b>Немного о себе:</b></label>
+            <textarea id="about" rows="10" placeholder="Расскажите о себе..."></textarea>
+
+            <div class="button-container">
+                <input type="submit" value="Отправить!">
+                <button type="button" onclick="window.location.reload();">Сброс</button>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
